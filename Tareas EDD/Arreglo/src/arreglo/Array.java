@@ -10,6 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author yahir
+ * @param <T>
  */
 public class Array<T> {
     int tamanio;
