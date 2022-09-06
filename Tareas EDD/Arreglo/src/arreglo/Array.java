@@ -11,38 +11,43 @@ import java.util.ArrayList;
  *
  * @author yahir
  */
-public class Array{
-    
-    
+public class Array<T> {
     int tamanio;
-    int indice;
-    String valor;
-    
-    ArrayList<String> Arrays = new ArrayList<>();
+    ArrayList<T> datos;
 
-    public Array() {
-    }
-
-    public Array(int tamanio) {
-        this.tamanio = tamanio;
-    }
-    public static int getLongitud (int tamanio) {
-    return tamanio;
-    
+    public Array(int tam) {
+        this.tamanio = tam;
+        datos = new ArrayList();
+        for (int i = 0; i < this.tamanio; i++) {
+            datos.add(null);
+        }
     }
     
-    public int getElemento(int indice) {
-    return indice;
-     
+    public T getElemento(int indice) throws IndexOutOfBoundsException{
+        return datos.get(indice);
     }
-        
-     public void limpiar(int valor){
-     Arrays.clear();
-     
+    
+    public void setElemento(int indice, T dato)throws IndexOutOfBoundsException{
+        this.datos.set(indice, dato);
     }
 
-     /*public String toString() {
-         return "arrays{" + arrays + '}';
-     }*/
+    public int getTamanio() {
+        return tamanio;
+    }
+    
+    public void limpiar(T dato){
+        for (int i = 0; i < datos.size(); i++) {
+            datos.set(i, dato);
+        }
+    }
+
+    @Override
+    public String toString() {
+        String estado = "";
+        for (T dato : datos) {
+            if(dato != null)
+            estado += dato.toString() +"\n";
+        }
+        return estado;
+    }
 }
-
