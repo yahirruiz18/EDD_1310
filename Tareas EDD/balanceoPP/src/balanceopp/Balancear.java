@@ -15,8 +15,8 @@ import java.io.IOException;
  */
 public class Balancear {
     
-    private String nombre;
     private String linea;
+    private String nombre;
     private PilasADT<Character> lista = new PilasADT();
     private int i = 0;
     private int ii = 0;
@@ -26,17 +26,21 @@ public class Balancear {
         this.nombre = nombre;
     }
     
-    public String balancear() throws FileNotFoundException, IOException{
+    public String balancear() throws FileNotFoundException, IOException
+    {
         BufferedReader buffer = new BufferedReader(new FileReader(nombre));
         
         linea = buffer.readLine();
-        while (linea != null) {
+        
+        while (linea != null) 
+        {
             
             System.out.println(linea);
             
             char arreglo_letras[] = linea.toCharArray();
             
-            for (int i = 0; i < arreglo_letras.length; i++) {
+            for (int i = 0; i < arreglo_letras.length; i++) 
+            {
                
                 if (arreglo_letras[i] == '(')
                 {
@@ -44,6 +48,7 @@ public class Balancear {
                     i++;
 
                 } else 
+                    
                     if (arreglo_letras[i] == ')') 
                     {
                     if (!lista.isEmpty()) 
@@ -55,15 +60,17 @@ public class Balancear {
             }
             linea = buffer.readLine();
         }
-        if (lista.isEmpty()) {
-            return "\nSALIDA: Esta correctamente balanceada en parentesis \n" +
-            "Numero de parentesis abiertos: " + i + "\n"+
-            "Numero de parentesis cerrados: " + ii + "\n\n";
+        if (lista.isEmpty()) 
+        {
+            return "\n Se encuentra bien balanceada \n" +
+            "Tiene " + i + " parentesis abiertos" + "\n"+
+            "Tiene " + ii + " parentesis cerrados" + "\n";
 
-        } else {
-            return "\nSALIDA: No esta balanceada en parentesis \n" +
-            "Numero de parentesis abiertos: " + i + "\n"+
-            "Numero de parentesis cerrados: " + ii + "\n\n";
+        }else 
+        {
+            return "\n No se encuentra balanceada \n" +
+            "Tiene " + i + " parentesis abiertos" + "\n"+
+            "Tiene " + ii + " parentesis cerrados" + "\n";
         }
     }
     
