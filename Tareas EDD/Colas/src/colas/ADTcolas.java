@@ -12,7 +12,7 @@ public class ADTcolas
 {
     
     private Nodo inicioCola, finalCola;
-    String cola = "";
+    
     
     public ADTcolas()
     {
