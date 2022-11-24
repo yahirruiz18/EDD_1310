@@ -14,7 +14,16 @@ public class ColasPriority {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        /*
+        PROFESOR, PARA HACER ESTOS METODOS ME APOYE EN EL SIGUIENTE CONTENIDO 
+        "https://youtu.be/mcMXy4EH0MQ" YA QUE NO ENCONTRABA UNA MANERA DE ASOCIAR OTRO ELEMENTO A MI VARIABLE COLA
+        PARA ASIGNARLE LA PRIORIDAD DESDE ESE, Y EL ADT QUE ESTA HECHO EN ESTE CODIGO ES MAS DE UN USO PARTICULAR,
+        NECESITO IMPLEMENTAR LOS GENERICOS PARA HACER ESTOS METODOS DE USO GENERAL Y ESTOY TRABAJANDO EN ESO.
+        */
+        
+ 
     }
     
 }
