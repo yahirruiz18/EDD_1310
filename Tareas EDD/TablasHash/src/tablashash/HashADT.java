@@ -12,7 +12,7 @@ public class HashADT {
     
     HashADT[] hashTable = new HashADT[10];
     int dato;
-    int estado; //0 = Vacío, 1 = Eliminado, 2 = Ocupado
+    int estado; 
     int m = 10;
 
     static int funcion(int n, int m) 
